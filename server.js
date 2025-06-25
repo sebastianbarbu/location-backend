@@ -5,7 +5,7 @@ const admin = require('firebase-admin');
 const app = express();
 
 admin.initializeApp({
-  credential: admin.credential.cert(require('./serviceAccountKey.json'))
+  credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_CONFIG_JSON))
 });
 const db = admin.firestore();
 
