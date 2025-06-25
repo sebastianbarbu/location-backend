@@ -24,7 +24,7 @@ app.post('/locatie', async (req, res) => {
   res.send({ success: true });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
